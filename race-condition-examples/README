@@ -1,0 +1,23 @@
+To compile: do "make all". Edit Makefile if you need to change how the code
+		is compiled.
+
+	Tested platform: Linux. Uses /dev/urandom on Linux.
+
+
+race1: code with race conditions in printing using fork(). 
+	But race conditions are unlikely to show up because machines are 
+	too fast. 
+
+race2: same code as race1, but the code is slowed down with random delays.
+	Race conditions are likely to show up. Different results may
+	print on different runs.
+
+race3: Race conditions on a shared variable using threads. Also uses
+	random delays to slow down the threads and make it more likely
+	that context-switches will take place in different orders in a small
+	number of runs.
+
+	This code uses the POSIX pthread library.
+
+
+	
