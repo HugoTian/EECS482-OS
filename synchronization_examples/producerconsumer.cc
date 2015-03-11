@@ -7,6 +7,8 @@
 #include <pthread.h>
 #include <stdlib.h>
 #include <iostream>
+#include <assert.h>
+#include <cstring>
 #include "randomdelay.h"
 using namespace std;
 
